@@ -7,8 +7,16 @@
       <div class="col-md-4">
         <%= image_tag helper.picture_url, width: '100%' if helper.picture.present?%>
         <h4><%= link_to helper.name, helper %></h4>
-        <h5>Speciality: <%= helper.speciality %> </h5>
+        <h5>You can call me: <%= helper.alias %> </h5>
+        <h5>I can do: <%= helper.speciality %> </h5>
         <h5>Rating: <%= helper.rating %>/10</h5>
+        <h5>Years of Experience: <%= helper.years_of_experience %> years</h5>
+        <h5>Rates: $<%= helper.rates %>/hr</h5>
+        <h5>Age: <%= helper.age %> years old</h5>
+
+
+
+
       </div>
     <% end %>
   </div>
