@@ -37,7 +37,8 @@
 
 <p>
   <strong>Picture:</strong>
-  <%= @helper.picture %>
+  <%= image_tag(@helper.picture_url, width: 600) if @helper.picture.present? %>
+
 </p>
 
 <%= link_to 'Edit', edit_helper_path(@helper) %> |
