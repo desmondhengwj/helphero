@@ -1,40 +1,15 @@
 
-<h1>Helpers</h1>
+<h1>All Helpers</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Alias</th>
-      <th>Age</th>
-      <th>Years of experience</th>
-      <th>Rating</th>
-      <th>Rates</th>
-      <th>Speciality</th>
-      <th>Picture</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @helpers.each do |helper| %>
-      <tr>
-        <td><%= helper.name %></td>
-        <td><%= helper.alias %></td>
-        <td><%= helper.age %></td>
-        <td><%= helper.years_of_experience %></td>
-        <td><%= helper.rating %></td>
-        <td><%= helper.rates %></td>
-        <td><%= helper.speciality %></td>
-        <td><%= image_tag helper.picture_url(:thumb) if helper.picture? %></td>
-        <td><%= link_to 'Show', helper %></td>
-        <td><%= link_to 'Edit', edit_helper_path(helper) %></td>
-        <td><%= link_to 'Destroy', helper, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<% @helpers.in_groups_of(3) do |group| %>
+  <div class="row">
+    <% group.compact.each do |helper| %>
+      <div class="col-md-4">
+        <%= image_tag helper.picture_url, width: '100%' if helper.picture.present?%>
+        <h4><%= link_to helper.name, helper %></h4>
+        <h5>Speciality: <%= helper.speciality %> </h5>
+        <h5>Rating: <%= helper.rating %>/10</h5>
+      </div>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Helper', new_helper_path %>
+  </div>
+<% end %>
