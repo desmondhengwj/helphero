@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Helpers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Alias</th>
+      <th>Age</th>
+      <th>Years of experience</th>
+      <th>Rating</th>
+      <th>Rates</th>
+      <th>Speciality</th>
+      <th>Picture</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @helpers.each do |helper| %>
+      <tr>
+        <td><%= helper.name %></td>
+        <td><%= helper.alias %></td>
+        <td><%= helper.age %></td>
+        <td><%= helper.years_of_experience %></td>
+        <td><%= helper.rating %></td>
+        <td><%= helper.rates %></td>
+        <td><%= helper.speciality %></td>
+        <td><%= helper.picture %></td>
+        <td><%= link_to 'Show', helper %></td>
+        <td><%= link_to 'Edit', edit_helper_path(helper) %></td>
+        <td><%= link_to 'Destroy', helper, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Helper', new_helper_path %>

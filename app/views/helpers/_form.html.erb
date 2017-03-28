@@ -1,0 +1,57 @@
+<%= form_for(helper) do |f| %>
+  <% if helper.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(helper.errors.count, "error") %> prohibited this helper from being saved:</h2>
+
+      <ul>
+      <% helper.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :alias %>
+    <%= f.text_field :alias %>
+  </div>
+
+  <div class="field">
+    <%= f.label :age %>
+    <%= f.number_field :age %>
+  </div>
+
+  <div class="field">
+    <%= f.label :years_of_experience %>
+    <%= f.number_field :years_of_experience %>
+  </div>
+
+  <div class="field">
+    <%= f.label :rating %>
+    <%= f.number_field :rating %>
+  </div>
+
+  <div class="field">
+    <%= f.label :rates %>
+    <%= f.number_field :rates %>
+  </div>
+
+  <div class="field">
+    <%= f.label :speciality %>
+    <%= f.text_area :speciality %>
+  </div>
+
+  <div class="field">
+    <%= f.label :picture %>
+    <%= f.text_field :picture %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
