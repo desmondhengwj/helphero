@@ -5,6 +5,10 @@
         <%= csrf_meta_tags %>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css.map">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.min.css.map">
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
         <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     </head>
@@ -53,17 +57,18 @@
                 <% end %>
                 <%= yield %>
             </div>
+            <br>
+<br><br><br><br><br><br>
+            <footer class="footer">
+                <div class="container">
+                    <p class="text-muted">&copy; Help Hero 2017</p><br>
+                    <a target="_blank" title="follow me on Twitter" href="http://www.twitter.com"><img alt="follow me on Twitter" src="http://i.imgur.com/FHOcVjk.png" height="42" width="42" border=0></a>
+                    <a target="_blank" title="follow me on Facebook" href="http://www.facebook.com"><img alt="follow me on Facebook" src="http://i.imgur.com/XB8Ztxu.png" height="42" width="42" border=0></a>
+                    <a target="_blank" title="follow me on Instagram" href="http://www.instagram.com"><img alt="follow me on Instagram" src="http://i.imgur.com/Yp2hULF.png" height="42" width="42" border=0></a>
+                    <a target="_blank" title="Call me on Whatsapp" href="http://www.contact.com"><img alt="Call me on Whatsapp" src="http://i.imgur.com/IYx4mAt.png" height="42" width="42" border=0></a>
 
-    <footer class="footer">
-      <div class="container">
-        <p class="text-muted">&copy; Help Hero 2017</p><br>
-        <a target="_blank" title="follow me on Twitter" href="http://www.twitter.com"><img alt="follow me on Twitter" src="http://i.imgur.com/FHOcVjk.png" height="42" width="42" border=0></a>
-        <a target="_blank" title="follow me on Facebook" href="http://www.facebook.com"><img alt="follow me on Facebook" src="http://i.imgur.com/XB8Ztxu.png" height="42" width="42" border=0></a>
-        <a target="_blank" title="follow me on Instagram" href="http://www.instagram.com"><img alt="follow me on Instagram" src="http://i.imgur.com/Yp2hULF.png" height="42" width="42" border=0></a>
-        <a target="_blank" title="Call me on Whatsapp" href="http://www.contact.com"><img alt="Call me on Whatsapp" src="http://i.imgur.com/IYx4mAt.png" height="42" width="42" border=0></a>
-
-      </div>
-    </footer>
+                </div>
+            </footer>
             <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.js"></script>
         </body>
     </html>
