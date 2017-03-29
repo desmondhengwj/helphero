@@ -11,7 +11,7 @@ gem 'carrierwave'
 gem 'mini_magick', '3.8.0'
 gem 'pry'
 gem "bulma-rails"
-gem 'bootstrap-sass', '3.2.0.2'
+gem 'bootstrap-sass', '~> 3.3.5'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
