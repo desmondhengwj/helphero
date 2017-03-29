@@ -10,7 +10,7 @@ class HelpersController < ApplicationController
   # GET /helpers/1
   # GET /helpers/1.json
   def show
-    @comments = Comment.where(helper_id: @helper).order("created_at_DESC ")
+    @comments = Comment.where(helper_id: @helper)
   end
 
   # GET /helpers/new
