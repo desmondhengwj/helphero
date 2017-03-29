@@ -188,7 +188,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass (~> 3.3.5)
-  bulma-rails
+  bulma-rails (~> 0.4.0)
   byebug
   carrierwave
   coffee-rails (~> 4.2)
@@ -211,4 +211,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.14.4
+   1.14.6
