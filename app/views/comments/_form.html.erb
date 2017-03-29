@@ -1,0 +1,5 @@
+<%= form_for([@helper, @helper.comments.build]) do |f| %>
+  <%= f.text_area :content %>
+  <%= f.submit %>
+
+<% end %>
