@@ -11,6 +11,7 @@ gem 'rails', '~> 5.0.2'
 gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick', '3.8.0'
+gem 'pry'
 
 
 # Use Puma as the app server
