@@ -12,6 +12,8 @@ gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick', '3.8.0'
 gem 'pry'
+gem "bulma-rails", "~> 0.4.0"
+
 
 
 # Use Puma as the app server

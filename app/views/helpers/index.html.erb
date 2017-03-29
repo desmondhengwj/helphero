@@ -1,11 +1,8 @@
-
-<h1>All Helpers</h1>
-
-<% @helpers.in_groups_of(4) do |group| %>
+<% @helpers.in_groups_of(3) do |group| %>
   <div class="row">
     <% group.compact.each do |helper| %>
-      <div class="col-md-3">
-        <%= image_tag helper.picture_url, width: '100%' if helper.picture.present?%>
+      <div class="col-md-4">
+        <%= image_tag helper.picture_url, width: '100%', :class=> "img-circular" if helper.picture.present?%>
         <h4><%= link_to helper.name, helper %></h4>
         <p>You can call me: <%= helper.alias %> </p>
         <p>I can do: <%= helper.speciality %> </p>

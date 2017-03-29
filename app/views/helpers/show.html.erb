@@ -1,4 +1,38 @@
+<div class="tile is-ancestor">
+    <div class="tile is-vertical is-8">
+        <div class="tile">
+            <div class="tile is-parent is-vertical">
+                <article class="tile is-child box">
+                    Hi, my name is
+                    <strong><%= @helper.name %></strong>
+                    and you can address me as
+                    <%= @helper.alias %>. I am
+                    <%= @helper.age %>
+                    this year and I have
+                    <%= @helper.years_of_experience %>
+                    years in providing cleaning services.
+                    <br><br>
+                    <strong> Rates:$<%= @helper.rates%>/hr </strong>
+                    <br>
+                    <strong> Specialty: <%= @helper.speciality%></strong>
 
+                </article>
+                <article class="tile is-child box">
+                  <%= render 'comments/comment' %>
+                </article>
+
+
+            </div>
+            <div class="tile is-parent">
+                <article class="tile is-child box">
+                    <%= image_tag(@helper.picture_url, width: 400) if @helper.picture.present? %>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--
 <p>
   <strong>Name:</strong>
   <%= @helper.name %>
@@ -34,13 +68,13 @@
   <%= @helper.speciality %>
 </p>
 
-<p>
-  <strong>Picture:</strong>
-  <%= image_tag(@helper.picture_url, width: 600) if @helper.picture.present? %>
+</div>
 
+<p>
+  <%= image_tag(@helper.picture_url, width: 200) if @helper.picture.present? %>
 </p>
 
 <%= render 'comments/comment' %>
 
 <%= link_to 'Edit', edit_helper_path(@helper) %> |
-<%= link_to 'Back', helpers_path %>
+<%= link_to 'Back', helpers_path %> -->
