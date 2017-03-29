@@ -1,13 +1,15 @@
-<h6> No. of Feedbacks: <%= pluralize(@comments.count, "Comment") %> </h6>
+<i><p> Total number of comments: <%= pluralize(@comments.count, "") %> <p></i>
 
 <% @comments.each do |comment| %>
 
-  <p><b><%= comment.user.email %></p>
+  <p><i><b><%= comment.user.email %></b></i></p>
   <p><%= comment.content %></p>
   <% if current_user == comment.user %>
-    <%= link_to "Delete comment", [comment.helper, comment], method: :delete %>
-    <%= link_to "Edit comment", edit_helper_comment_path(comment.helper, comment) %>
+    <i><%= link_to "Delete comment", [comment.helper, comment], method: :delete %></i>
+    <i><%= link_to "Edit comment", edit_helper_comment_path(comment.helper, comment) %></i>
   <% end %>
 <% end %>
 
+<br>
+<br>
 <%= render 'comments/form' %>
